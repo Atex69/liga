@@ -1,0 +1,91 @@
+@media (min-width: 1420px) and (max-width: 1920px){
+    .catHouseContentGrid {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+}
+
+@media (min-width: 1350px)  and (max-width: 1419px) {
+    .catHouseContentGrid {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+}
+@media (min-width: 950px)  and (max-width: 1280px) {
+    .catHouseContentGridRightCards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 23px;
+    }
+
+    .catHouseContentGridRightCardEconom {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .catHouseContentGridRightCardEconomPlus{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .catHouseContentGridRightCardComfort{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+
+    .catHouseContentGridRightCardSuite{
+        grid-area: 2 / 2 / 3 / 3;
+
+    }
+    .catHouseContentGridRightCardLuxe{
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .catHouseContentGridRightSuperLuxe{
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+}
+
+@media (min-width: 300px)  and (max-width: 950px) {
+    .catHouseContentGridRightCards{
+      display: flex;
+        flex-direction: column;
+    }
+
+.catCard{
+    align-self: center;
+    margin-bottom: 23px;
+}
+    .catHouseContentGrid,.headerContentGrid {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+
+}
+
+
+@media (min-width: 300px)  and (max-width: 690px) {
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        right: 19px;
+
+    }
+    .catHouseContentGrid, .headerContentGrid {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .menu-btn {
+        width: 64px;
+    }
+
+    .headerText{
+        display: none;
+    }
+
+    .headerTextContent{
+    flex-direction: column;
+    }
+}

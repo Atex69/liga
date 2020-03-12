@@ -1,19 +1,442 @@
-$color: silver;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap');
+.headerСontent{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  min-height: 76px;
+}
 
-body {
-  background: $color;
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+}
 
-  h1 {
-    font-weight: lighter;
+.headerContentGrid{
+  display: flex;
+  align-items: center;
+  grid-area: 1 / 1 / 3 / 4;
+  height: 76px;
+  justify-content: space-between;
+  margin-left: 75px;
+  margin-right: 75px;
+  position: relative;
+}
+.headerTextContent{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-left: auto;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+
+}
+
+.headerTextContent  {
+
+  li {
+    margin-right: 40px;
+    white-space: nowrap;
+    margin-top: 8px;
+  }
+
+  a{
+    color: black;
+    font-family: 'Lato', sans-serif;
+  font-weight: 600;
   }
 }
 
-a {
-  transition: all 0.5s ease-in-out;
+.headerTextContent :last-child{
+  margin-right: 0;
 }
 
-ul{
-  li{
-    display: inline-block;
+.menu-link {
+  text-decoration: none;
+}
+
+
+.menu-headerDown-text li {
+  margin-right: 40px;
+  white-space: nowrap;
+  margin-top: 8px;
+
+}
+
+.catHouseContentGrid{
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  margin-bottom: 80px;
+  grid-area: 1 / 1 / 2 / 4;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+.catHouseContentGridLeftPrice{
+  display: flex;
+  flex-direction: row;
+}
+
+.catHouseContentGridLeftPrice{
+  display: flex;
+
+
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color:#22262A;
+}
+
+.catHouseContentGridLeftPriceForm{
+  margin-top: 10px;
+  display: flex;
+}
+
+.catHouseContentGridLeftTittle{
+  font-family: 'Rubik', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color:#22262A;
+  margin-bottom: 40px;
+  width: 136%;
+}
+
+.catHouseMinPrice,.catHouseMaxPrice{
+width: 90px;
+  height: 24px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.catHouseMinPrice{
+  margin-right: 10px;
+}
+
+.header{
+  margin: 0 auto;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.choises {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0;
+  color: black;
+}
+
+
+.catHouseContentGridLeftAreaTittle,.catHouseContentGridLeftEquipTittle{
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.catHouseContentGridLeftAreaButtonApply{
+margin-top: 40px;
+  margin-bottom: 15px;
+  min-width: 185px;
+  height: 42px;
+
+  border: solid 1px #FAC663;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  border-radius: 20px;
+  background: #FAC663;
+  font-family: 'Lato', sans-serif;
+}
+
+.catHouseContentGridLeftAreaButtonThrow{
+  min-width: 185px;
+  height: 42px;
+  background: transparent;
+  border: solid 1px #FAC663;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  border-radius: 20px;
+  font-family: 'Lato', sans-serif;
+}
+.catHouseContentGridLeftAreaButton{
+  display: flex;
+  flex-direction: column;
+}
+
+.catHouseContentGridRightCards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 23px;
+}
+
+.catHouseContentGridRightCardsRow1,.catHouseContentGridRightCardsRow2{
+  display: flex;
+  flex-direction: row;
+}
+
+.catCard{
+  width: 270px;
+  height: 450px;
+  margin-left: 42px;
+  border-radius: 10px;
+  border: 1px solid #E1E1E1;
+  background: #f0f0f082;
+}
+
+.catHouseContentGridRightFilter{
+  text-align: -webkit-right;
+  margin-bottom: 8%;
+}
+
+.catHouse{
+  margin-top: 4%;
+  height: 1585px;
+}
+.catCardName{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  padding-left: 21px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.catCardSize,.catCardArea,.catCardEquip,.catCardPrice{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: black;
+  padding-left: 21px;
+  margin-bottom: 15px;
+}
+
+.catCardPriceBold{
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.catCardPrice{
+  bold{
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
   }
+}
+
+
+.catCardButton{
+  min-width: 230px;
+  height: 42px;
+  border: solid 1px #FF7236;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  border-radius: 20px;
+  background: #FF7236;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  place-content: space-between;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+body{
+  a{
+    text-decoration: none;
+  }
+}
+
+.catCardButton{
+
+  p{
+    margin-left: 25%;
+    margin-top: 10px;
+  }
+
+  img{
+    margin-top: 2px;
+  }
+}
+
+.catHouseContentGridLeft{
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.catHouseContentGridLeftAreaContent,.catHouseContentGridLeftEquipContent{
+  line-height: 30px;
+}
+
+.catHouseContentGridRightCardEconom {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.catHouseContentGridRightCardEconomPlus{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.catHouseContentGridRightCardComfort{
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+
+.catHouseContentGridRightCardSuite{
+  grid-area: 2 / 1 / 3 / 2;
+
+}
+.catHouseContentGridRightCardLuxe{
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.catHouseContentGridRightSuperLuxe{
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+
+.catCardEquip{
+  img{
+    margin-left: 8px;
+  }
+}
+
+
+.catCardPrice{
+  bold{
+    margin-left: 10px;
+  }
+}
+
+
+.mobile-menu__menu-header-wrap {
+  z-index: 995;
+  display: none;
+}
+
+.mobile-menu {
+  text-align: -webkit-right;
+  z-index: 996;
+  display: none;
+  grid-area: 1 / 1 / 3 / 4;
+}
+
+.menu-btn {
+  display: block;
+  width: 95px;
+  height: 40px;
+  position: relative;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+  display: block;
+  width: 61px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 103%;
+  left: 98.7%;
+  margin-left: -60px;
+  margin-top: -3px;
+  transition: all 0.4s;
+}
+.mobile-menu.menu-active {
+  position: fixed;
+  background: transparent;
+  right: 35px;
+  top: 40px;
+}
+
+
+.menu-btn span:before, .menu-btn span:after {
+  content: '';
+}
+
+.menu-btn span:before {
+  transform: translateY(-15px);
+}
+
+.menu-btn span:after {
+  transform: translateY(15px);
+}
+
+.menu-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.mobile-menu__menu-header-text {
+  text-align-last: left;
+  margin-right: 29%;
+  line-height: 40px;
+}
+
+.mobile-menu.menu-active {
+  position: fixed;
+  background: transparent;
+}
+
+.menu-btn.menu-active span {
+  background: none!important;
+}
+
+.menu-btn.menu-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.menu-btn.menu-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+}
+
+.mobile-menu__menu-header-wrap.menu-active {
+  transition: all 0.4s linear;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 95;
+}
+
+.mobile-menu__menu-header-wrap,.mobile-menu {
+  z-index: 100;
+  display: none
+
+
+}
+
+
+.mobile-menu.menu-active a{
+   bottom: 37px;
+ }
+
+.headerTextContent a:hover{
+  color: #ff7236;
+}
+
+.catCard button:hover,.catHouseContentGridLeftAreaButton button:hover,.catHouseContentGridLeftPriceForm input:hover,.catHouseContentGridLeftAreaContent input:hover,.catHouseContentGridLeftAreaContent label:hover,.catHouseContentGridLeftEquipContent input:hover,.catHouseContentGridLeftEquipContent label:hover{
+  cursor:pointer;
+}
+
+.catCard button:hover{
+background: #e9642a;
+}
+
+.headerLogo:hover {
+  -webkit-transform: rotateZ(20deg);
+  -ms-transform: rotateZ(20deg);
+  transform: rotateZ(20deg);
 }

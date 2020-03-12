@@ -1,12 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rfc5xgt.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <title>Котейка</title>
 </head>
-<body>
-<h1>Hello Wohjkl</h1>
 
+<body>
+
+<div class="mobile-menu__menu-header-wrap">
+    <div class="menu-logo-container">
+        <div class="menu-logo"></div>
+    </div>
+    <ul class="mobile-menu__menu-header-text headerTextContent">
+        <li><a href="#" class="menu-link">Почему мы?</a></li>
+        <li><a href="#" class="menu-link">Номера</a></li>
+        <li><a href="#" class="menu-link">Отзывы</a></li>
+        <li><a href="#" class="menu-link">Как нас найти</a></li>
+
+    </ul>
+</div>
+<div class="main">
+
+<div class="header">
+    <div class="headerСontent main-grid">
+       <div class="headerContentGrid">
+        <div class="headerLogo">
+             <img src="img/catLogo.svg" alt="logo">
+        </div>
+           <div class="headerText">
+               <ul class="headerTextContent">
+                   <li><a href="#" class="menu-link">Почему мы?</a></li>
+                   <li><a href="#" class="menu-link">Номера</a></li>
+                   <li><a href="#" class="menu-link">Отзывы</a></li>
+                   <li><a href="#" class="menu-link">Как нас найти</a></li>
+               </ul>
+           </div>
+    </div>
+        <div class="mobile-menu">
+            <a href="#" class="menu-btn">
+                <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+    <div class="catHouse">
+        <div class="catHouseContent main-grid">
+            <div class="catHouseContentGrid">
+<div class="catHouseContentGridLeft">
+    <div class="catHouseContentGridLeftTittle">Наши номера</div>
+    <div class="catHouseContentGridLeftContent">
+    <div>
+        <div class="catHouseContentGridLeftPrice">
+            Цена за сутки,₽
+        </div>
+    </div>
+    <div class="catHouseContentGridLeftPriceForm">
+        <input type="text" class="catHouseMinPrice" name="login" placeholder="от 100" value="" size="40">
+        <input type="text" class="catHouseMaxPrice" name="login" placeholder="до 600" value="" size="40">
+    </div>
+        <div class="catHouseContentGridLeftArea">
+            <div class="catHouseContentGridLeftAreaTittle">
+                Площадь
+            </div>
+            <div class="catHouseContentGridLeftAreaContent">
+                <div class="choises">
+                    <input type="checkbox" id="bench1" class="checkbox" checked="">
+                    <label for="bench1">0,63 м2</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench2" class="checkbox" checked="">
+                    <label for="bench2">0,90 м2</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench3" class="checkbox" checked="">
+                    <label for="bench3">1,13 м2</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench4" class="checkbox" checked="">
+                    <label for="bench4">1,56 м2</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench5" class="checkbox" checked="">
+                    <label for="bench5">2,56 м2</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench6" class="checkbox" checked="">
+                    <label for="bench6">2,88 м2</label>
+                </div>
+            </div>
+            <div class="catHouseContentGridLeftEquipTittle">
+                Оснащение номера
+            </div>
+            <div class="catHouseContentGridLeftEquipContent">
+                <div class="choises">
+                    <input type="checkbox" id="bench1" class="checkbox" checked="false">
+                    <label for="bench1">Пустой номер</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench2" class="checkbox" checked="">
+                    <label for="bench2">Лежак</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench3" class="checkbox" checked="">
+                    <label for="bench3">Когтеточка</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench4" class="checkbox" checked="">
+                    <label for="bench4">Игровой-комплекс</label>
+                </div>
+                <div class="choises">
+                    <input type="checkbox" id="bench5" class="checkbox" checked="">
+                    <label for="bench5">Домик</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="catHouseContentGridLeftAreaButton">
+<a href="#"> <button class="catHouseContentGridLeftAreaButtonApply">Применить</button></a>
+            <a href="#"><button class="catHouseContentGridLeftAreaButtonThrow">Сбросить фильтр</button></a>
+        </div>
+    </div>
+
+</div>
+<div class="catHouseContentGridRight">
+
+    <div class="catHouseContentGridRightFilter">
+        <button class="catFilterBut" data-type="area">Площадь по возрастанию</button>
+        <button class="catFilterBut" data-type="" >Площадь по убыванию</button>
+        <button  class="catFilterBut" data-type="price">Цена по возрастанию</button>
+        <button  class="catFilterBut" data-type="">Площадь по убыванию</button>
+        <select id="filter">
+<!--            <option id="areaUp">По площади</option>-->
+            <option >По площади</option>
+            <option>По цене</option>
+            <option style="background-image: url(imgselect/06.gif);" ></option>
+        </select>
+
+    </div>
+    <div class="catHouseContentGridRightContent">
+        <div class="catHouseContentGridRightCards" id="CatCards">
+
+                <div class="catHouseContentGridRightCardEconom catCard" data-area="0.63" data-price="100">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightCardEconom.jpg"></div>
+                    <div class="catCardName">Эконом</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 90х70х180 см</div>
+                    <div class="catCardArea">Площадь - 0,63 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector.svg"> </div>
+                    <div class="catCardPrice">Цена за сутки:<bold>100₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+                <div class="catHouseContentGridRightCardEconomPlus catCard" data-area="0.90" data-price="200">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightCardEconomPlus.jpg"></div>
+                    <div class="catCardName">Эконом плюс</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 90х100х180 см</div>
+                    <div class="catCardArea">Площадь - 0,90 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector4.png"><img src="img/vector3.png">  </div>
+                    <div class="catCardPrice">Цена за сутки:<bold> 200₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+                <div class="catHouseContentGridRightCardComfort catCard" data-area="1.13" data-price="250">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightCardComfort.jpg"></div>
+                    <div class="catCardName">Комфорт</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 100х125х180 см</div>
+                    <div class="catCardArea">Площадь - 1,13 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector4.png"><img src="img/vector3.png"> <img src="img/vector2.png">  </div>
+                    <div class="catCardPrice">Цена за сутки:<bold>250₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+
+
+                <div class="catHouseContentGridRightCardSuite catCard" data-area="1.56" data-price="350">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightCardSuite.jpg"></div>
+                    <div class="catCardName">Сьют</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 125х125х180 см</div>
+                    <div class="catCardArea">Площадь - 1,56 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector4.png"><img src="img/vector3.png"> <img src="img/vector2.png"> </div>
+                    <div class="catCardPrice">Цена за сутки:<bold>350₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+                <div class="catHouseContentGridRightCardLuxe catCard" data-area="2.56" data-price="50">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightCardLuxe.jpg"></div>
+                    <div class="catCardName">Люкс</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 160х160х180 см</div>
+                    <div class="catCardArea">Площадь - 2,56 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector4.png"><img src="img/vector3.png"> <img src="img/vector2.png"><img src="img/vector1.png"></div>
+                    <div class="catCardPrice">Цена за сутки:<bold class=>50₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+                <div class="catHouseContentGridRightSuperLuxe catCard" data-area="2.88" data-price="600">
+                    <div class="catCardImg"><img src="img/catHouseContentGridRightSuperLuxe.jpg"></div>
+                    <div class="catCardName">Супер-Люкс</div>
+                    <div class="catCardSize">Размеры (ШхГхВ) - 180х160х180 см</div>
+                    <div class="catCardArea">Площадь - 2,88 м2</div>
+                    <div class="catCardEquip">Оснащение номера<img src="img/vector4.png"><img src="img/vector3.png"> <img src="img/vector2.png"><img src="img/vector1.png"> </div>
+                    <div class="catCardPrice">Цена за сутки:<bold>600₽</bold></div>
+                    <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png"> </button></a>
+                </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
