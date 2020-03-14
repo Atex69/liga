@@ -2,9 +2,9 @@ $(document).ready(function() {
 
 
     $(window).scroll(function () {
-        var height = $(window).scrollTop();
+        let height = $(window).scrollTop();
         if (height > 500) {
-            $(".header").css({"position": "fixed"});
+            $(".header").css({"position": "sticky"});
 
         } else {
             $(".header").css({"position": "sticky"});
@@ -62,3 +62,76 @@ $(document).ready(function() {
     mySort()
 
 });
+
+$('#bench1').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCardEconom ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardEconom').hide(100);
+    }
+});
+
+$('#bench2').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCardEconomPlus ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardEconomPlus').hide(100);
+    }
+});
+
+$('#bench3').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCardComfort ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardComfort').hide(100);
+    }
+});
+
+$('#bench4').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCardSuite ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardSuite').hide(100);
+    }
+});
+
+$('#bench5').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCardLuxe ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardLuxe').hide(100);
+    }
+});
+
+$('#bench6').click(function(){
+    if ($(this).is(':checked')){
+        $('.catHouseContentGridRightCard ').show(100);
+    } else {
+        $('.catHouseContentGridRightCardEconom').hide(100);
+    }
+});
+
+
+$('#showCatsButton').click(function(){
+    removeCards();
+    // addCards();
+    // filter();
+}
+
+function removeCards(){
+
+
+    $("div.catHouseContentGridRightCards").empty()
+}
+
+function addCards(){
+}
+
+
+function filter(){
+
+
+let minPrice= $('.catHouseMinPrice').val();
+let maxPrice= $('.catHouseMaxPrice').val();
+}
+
