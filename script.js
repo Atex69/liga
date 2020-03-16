@@ -1,10 +1,12 @@
 let minPrice = 0;
 let maxPrice = 600;
 let sortBy = "noSort";
+let selectedAreaCheckboxes = [];
+let selectedEquipCheckboxes = [];
 
 $(document).ready(function () {
 
-    $(window).scroll(function () {
+    $(window).on("scroll", function () {
         let height = $(window).scrollTop();
         if (height > 500) {
             $(".header").css({"position": "sticky"});
@@ -21,14 +23,14 @@ $(document).ready(function () {
         $('.mobile-menu__menu-header-wrap').toggleClass('menu-active');
     });
 
-    $("ul").click(function () {
+    $("ul").on("click", function () {
         $('.menu-btn').not(this).removeClass('menu-active');
         $('.mobile-menu').not(this).removeClass('menu-active');
         $('.mobile-menu__menu-header-wrap').not(this).removeClass('menu-active');
 
     });
 
-    $("button").click(function () {
+    $("button").on("click", function () {
         $('.menu-btn').not(this).removeClass('menu-active');
         $('.mobile-menu').not(this).removeClass('menu-active');
         $('.mobile-menu__menu-header-wrap').not(this).removeClass('menu-active');
@@ -49,11 +51,6 @@ $(document).ready(function () {
 function showCats() {
     removeCards();
     filter();
-
-    let arrCat = $('#catCheckContainer input:checkbox:checked').map(function () {
-        return this.value;
-    }).get();
-    console.log(arrCat);
 }
 
 function removeCards() {
@@ -67,11 +64,21 @@ function filter() {
     maxPrice = $('.catHouseMaxPrice').val();
     if (maxPrice === "")
         maxPrice = 600;
-    render(minPrice, maxPrice,  'area');
+
+    selectedAreaCheckboxes = $('.catHouseContentGridLeftAreaContent input:checkbox:checked').map(function () {
+        return this.value;
+    }).get();
+
+    selectedEquipCheckboxes = $('.catHouseContentGridLeftEquipContent input:checkbox:checked').map(function () {
+        return this.value;
+    }).get();
+
+    render();
 }
 
 
 class ModelCat {
+    equipNames = [];
 
     constructor(name, image, price, size, area, equip) {
         this.image = image;
@@ -80,17 +87,24 @@ class ModelCat {
         this.area = area;
         this.equip = equip;
         this.price = price;
+        this.fillEquipNames();
+        console.log(this.equipNames);
+    }
+
+    fillEquipNames() {
+        this.equip.split(">").forEach(element => this.equipNames.push(element.substring(element.indexOf("id=")).substring(4).replace("\"", "")));
+        this.equipNames.pop();
     }
 }
 
 
 let cats = [
-    new ModelCat('Эконом', 'img/catHouseContentGridRightCardEconom.jpg', 100, '9070180', '0.63', '<img src="img/Vector.svg">'),
-    new ModelCat('Эконом плюс', 'img/catHouseContentGridRightCardEconomPlus.jpg', 200, '90100180', '0.90', '<img src="img/vector4.png"><img src="img/vector3.png">'),
-    new ModelCat('Комфорт', 'img/catHouseContentGridRightCardComfort.jpg', 250, '100125180', '1.13', '<img src="img/vector4.png"><img src="img/vector3.png"><img src="img/vector2.png">'),
-    new ModelCat('Сьют', 'img/catHouseContentGridRightCardSuite.jpg', 350, '125125180', '1.56', '<img src="img/vector4.png"><img src="img/vector3.png"><img src="img/vector2.png">'),
-    new ModelCat('Люкс', 'img/catHouseContentGridRightCardLuxe.jpg', 50, '160160180', '2.56', '<img src="img/vector4.png"><img src="img/vector3.png"><img src="img/vector2.png"><img src="img/vector1.png">'),
-    new ModelCat('Супер-Люкс', 'img/catHouseContentGridRightSuperLuxe.jpg', 600, '180160180', '2.88', '<img src="img/vector4.png"><img src="img/vector3.png"><img src="img/vector2.png"><img src="img/vector1.png">')
+    new ModelCat('Эконом', 'img/catHouseContentGridRightCardEconom.jpg', 100, '90x70x180', '0.63', '<img src="img/Vector.svg" id="none">'),
+    new ModelCat('Эконом плюс', 'img/catHouseContentGridRightCardEconomPlus.jpg', 200, '90x100x180', '0.90', '<img src="img/vector4.png"  id="bed"><img src="img/vector3.png" id="claw">'),
+    new ModelCat('Комфорт', 'img/catHouseContentGridRightCardComfort.jpg', 250, '100x125x180', '1.13', '<img src="img/vector4.png"  id="bed"><img src="img/vector3.png" id="claw"><img src="img/vector2.png" id="game">'),
+    new ModelCat('Сьют', 'img/catHouseContentGridRightCardSuite.jpg', 350, '125x125x180', '1.56', '<img src="img/vector4.png"  id="bed"><img src="img/vector3.png" id="claw"><img src="img/vector2.png" id=game">'),
+    new ModelCat('Люкс', 'img/catHouseContentGridRightCardLuxe.jpg', 50, '160x160x180', '2.56', '<img src="img/vector4.png"  id="bed"><img src="img/vector3.png" id="claw"><img src="img/vector2.png" id="game"><img src="img/vector1.png"id="house">'),
+    new ModelCat('Супер-Люкс', 'img/catHouseContentGridRightSuperLuxe.jpg', 600, '180x160x180', '2.88', '<img src="img/vector4.png"  id="bed"><img src="img/vector3.png" id="claw"><img src="img/vector2.png" id="game"><img src="img/vector1.png"id="house">')
 ];
 
 
@@ -100,12 +114,22 @@ let templateCat = (a) => `<div class="catCard">
 <div class="catCardSize">Размеры (ШхГхВ) - ${a.size}см</div>
 <div class="catCardArea">Площадь - ${a.area}м2</div>
 <div class="catCardEquip">Оснащение номера ${a.equip}</div>
-<div class="catCardPrice">Цена за сутки:<bold>${a.price}</bold></div>
+<div class="catCardPrice">Цена за сутки:<bold>${a.price} Р</bold></div>
   <a href="#"> <button class="catCardButton"><p>Забронировать</p> <img src="img/paw.png" alt="paw"> </button></a>
 </div>`;
 
-let filterByPrice = (minPrice, maxPrice) => {
+let filterByPrice = () => {
     return (cat) => cat.price >= minPrice && cat.price <= maxPrice;
+};
+
+let filterByArea = () => {
+    return (cat) => selectedAreaCheckboxes.length === 0 || selectedAreaCheckboxes.includes(cat.area);
+};
+
+let filterByEquip = () => {
+    return (cat) => selectedEquipCheckboxes.every(function(element) {
+        return cat.equipNames.includes(element);
+    })
 };
 
 let sortByAreaUp = function (a, b) {
@@ -166,10 +190,10 @@ function render() {
         sortFunction = sortByPriceDown;
     }
 
-    console.log(sortBy);
-
     let htmlCats = cats
-        .filter(filterByPrice(minPrice, maxPrice))
+        .filter(filterByPrice())
+        .filter(filterByArea())
+        .filter(filterByEquip())
         .sort(sortFunction)
         .map(cat => templateCat(cat));
     let $catHouseContentGridRightCards = $('.catHouseContentGridRightCards');
