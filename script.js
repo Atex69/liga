@@ -16,6 +16,14 @@ $(document).ready(function () {
         }
     });
 
+    $('.checkbox').on('click', function () {
+        if ( $(this).is(':checked') ) {
+            $(".catHouseContentGridLeftAreaButton").addClass("checkFlex")
+        } else {
+
+        }
+    })
+
     $('.mobile-menu').on('click', function (e) {
         e.preventDefault();
         $('.menu-btn').toggleClass('menu-active');
@@ -36,7 +44,16 @@ $(document).ready(function () {
         $('.mobile-menu__menu-header-wrap').not(this).removeClass('menu-active');
 
     });
+    $('#delCatsButton').on("click", clearCheck);
+function clearCheck() {
+    $(":checkbox:checked").each(function () {
+        this.click();
+        removeCards();
+       showCats();
 
+
+    });
+}
 
     $('#showCatsButton').on("click", showCats);
 

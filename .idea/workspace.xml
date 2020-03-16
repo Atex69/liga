@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="20a50f61-6dd9-4e69-8576-8dcaf26caf44" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +33,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jquery-3.4.1.min.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SPP" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
@@ -64,7 +67,7 @@
       <workItem from="1584184979521" duration="4710000" />
       <workItem from="1584265946075" duration="5365000" />
       <workItem from="1584281026896" duration="10415000" />
-      <workItem from="1584307988764" duration="12042000" />
+      <workItem from="1584307988764" duration="15378000" />
     </task>
     <task id="LOCAL-00001" summary="верстка+адаптив">
       <created>1584056651601</created>
@@ -94,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584312624306</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="верстка+адаптив+сортировка+фильтр">
+      <created>1584320204684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584320204684</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="верстка+адаптив" />
     <MESSAGE value="верстка+адаптив+сортировка" />
-    <option name="LAST_COMMIT_MESSAGE" value="верстка+адаптив+сортировка" />
+    <MESSAGE value="верстка+адаптив+сортировка+фильтр" />
+    <option name="LAST_COMMIT_MESSAGE" value="верстка+адаптив+сортировка+фильтр" />
   </component>
 </project>

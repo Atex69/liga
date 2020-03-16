@@ -166,7 +166,7 @@ margin-top: 40px;
   font-family: 'Lato', sans-serif;
 }
 .catHouseContentGridLeftAreaButton{
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -439,4 +439,16 @@ background: #e9642a;
   -webkit-transform: rotateZ(20deg);
   -ms-transform: rotateZ(20deg);
   transform: rotateZ(20deg);
+}
+
+
+#filter{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.checkFlex{
+  display: flex;
+  flex-direction: column;
 }
